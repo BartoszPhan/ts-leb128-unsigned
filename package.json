@@ -1,0 +1,17 @@
+{
+  "name": "ts-leb128-unsigned",
+  "version": "0.1.0",
+  "description": "A library for reading and writing unsigned LEB128 variable-length integers.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
