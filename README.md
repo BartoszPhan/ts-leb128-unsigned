@@ -38,3 +38,10 @@ A multi-byte LEB128 value whose final byte has a zero payload is non-canonical: 
 - `encodeU64(value: bigint): Uint8Array`
 - `decodeU32(bytes: Uint8Array, offset?: number): { value: number, bytesRead: number }`
 - `decodeU64(bytes: Uint8Array, offset?: number): { value: bigint, bytesRead: number }`
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
